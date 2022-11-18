@@ -30,5 +30,4 @@ RSpec.describe Receipt do
       expect { receipt_1.receipt_formatter }.to raise_error "Error - Order not submitted"
     end
   end
-
 end
