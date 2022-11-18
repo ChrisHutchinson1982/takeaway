@@ -7,12 +7,9 @@ class Order
 
   def order_add(dish)
     fail "Error - Order already submitted" if @submit == true
-    
-    if @menu.menu_list.include?(dish) == true
-      @order << dish
-    else
-      fail "Error - Dish not included in menu"
-    end
+    menu_dish = @menu.menu_list.include?(dish)
+    fail "Error - Dish not included in menu" if menu_dish == false
+    return @order << dish
   end
 
   def order_list
@@ -20,11 +17,8 @@ class Order
   end
 
   def submit_order
-    if @order != [] 
-      @submit = true
-    else
-      fail "Error - No dishes added to order"
-    end
+    fail "Error - No dishes added to order" if @order == [] 
+    return @submit = true
   end
 
   def submitted?  

@@ -4,11 +4,9 @@ class Menu
   end
 
   def menu_add(dish) 
-    if @menu.include?(dish) == false
-      @menu << dish
-    else
-      fail "Error - Dish already added to menu"
-    end
+    duplicate_dish = @menu.include?(dish)
+    fail "Error - Dish already added to menu" if duplicate_dish == true
+    return @menu << dish
   end
 
   def menu_list
