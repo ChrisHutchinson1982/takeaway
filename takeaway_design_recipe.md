@@ -146,67 +146,67 @@ combinations that reflect the ways in which the system will be used._
 
 ```ruby
 
-# list of menu dishes with prices
-menu_1 = Menu.new
-dish_1 = Dish.new("Cod", 10.49)
-dish_2 = Dish.new("Chips", 3.99)
-dish_3 = Dish.new("Haddock", 7.00)
-menu_1.menu_add(dish_1)
-menu_1.menu_add(dish_2)
-menu_1.menu_add(dish_3)
-expect(menu_1.menu_list).to eq [dish_1, dish_2, dish_3]
+# # list of menu dishes with prices
+# menu_1 = Menu.new
+# dish_1 = Dish.new("Cod", 10.49)
+# dish_2 = Dish.new("Chips", 3.99)
+# dish_3 = Dish.new("Haddock", 7.00)
+# menu_1.menu_add(dish_1)
+# menu_1.menu_add(dish_2)
+# menu_1.menu_add(dish_3)
+# expect(menu_1.menu_list).to eq [dish_1, dish_2, dish_3]
 
 
-# returns error if dish already added to menu
-menu_1 = Menu.new
-dish_1 = Dish.new("Cod", 10.49)
-menu_1.menu_add(dish_1)
-expect { menu_1.menu_add(dish_1) }.to raise_error "Error - Dish already added to menu"
+# # returns error if dish already added to menu
+# menu_1 = Menu.new
+# dish_1 = Dish.new("Cod", 10.49)
+# menu_1.menu_add(dish_1)
+# expect { menu_1.menu_add(dish_1) }.to raise_error "Error - Dish already added to menu"
   
 
-# list of order dishes with prices
-menu_1 = Menu.new
-dish_1 = Dish.new("Cod", 10.49)
-dish_2 = Dish.new("Chips", 3.99)
-dish_3 = Dish.new("Haddock", 7.00)
-menu_1.menu_add(dish_1)
-menu_2.menu_add(dish_2)
-menu_3.menu_add(dish_3)
-order_1 = Order.new(menu_1)
-order_1.order_add(dish_1)
-order_1.order_add(dish_2)
-order_1.order_add(dish_2)
-expect(order_1.order_list).to eq [dish_1, dish_2, dish_2]
+# # list of order dishes with prices
+# menu_1 = Menu.new
+# dish_1 = Dish.new("Cod", 10.49)
+# dish_2 = Dish.new("Chips", 3.99)
+# dish_3 = Dish.new("Haddock", 7.00)
+# menu_1.menu_add(dish_1)
+# menu_2.menu_add(dish_2)
+# menu_3.menu_add(dish_3)
+# order_1 = Order.new(menu_1)
+# order_1.order_add(dish_1)
+# order_1.order_add(dish_2)
+# order_1.order_add(dish_2)
+# expect(order_1.order_list).to eq [dish_1, dish_2, dish_2]
 
-# returns error if dish not included in menu
-menu_1 = Menu.new
-dish_1 = Dish.new("Cod", 10.49)
-dish_2 = Dish.new("Chips", 3.99)
-menu_1.menu_add(dish_1)
-order_1 = Order.new(menu_1)
-expect { order_1.order_add(dish_2) }.to raise_error "Error - Dish not included in menu"
+# # returns error if dish not included in menu
+# menu_1 = Menu.new
+# dish_1 = Dish.new("Cod", 10.49)
+# dish_2 = Dish.new("Chips", 3.99)
+# menu_1.menu_add(dish_1)
+# order_1 = Order.new(menu_1)
+# expect { order_1.order_add(dish_2) }.to raise_error "Error - Dish not included in menu"
 
-# returns true if order has been submutited
-menu_1 = Menu.new
-dish_1 = Dish.new("Cod", 10.49)
-menu_1.menu_add(dish_1)
-order_1 = Order.new(menu_1)
-order_1.order_add(dish_1)
-order_1.submit_order
-expect(order_1.submitted?).to eq true
+# # returns true if order has been submutited
+# menu_1 = Menu.new
+# dish_1 = Dish.new("Cod", 10.49)
+# menu_1.menu_add(dish_1)
+# order_1 = Order.new(menu_1)
+# order_1.order_add(dish_1)
+# order_1.submit_order
+# expect(order_1.submitted?).to eq true
 
-# returns false if order has not been submutited
-menu_1 = Menu.new
-dish_1 = Dish.new("Cod", 10.49)
-menu_1.menu_add(dish_1)
-order_1 = Order.new(menu_1)
-order_1.order_add(dish_1)
-expect(order_1.submitted?).to eq false
+# # returns false if order has not been submutited
+# menu_1 = Menu.new
+# dish_1 = Dish.new("Cod", 10.49)
+# menu_1.menu_add(dish_1)
+# order_1 = Order.new(menu_1)
+# order_1.order_add(dish_1)
+# expect(order_1.submitted?).to eq false
 
-# returns error if order has no dishes
-menu_1 = Menu.new
-order_1 = Order.new(menu_1)
-expect { order_1.submit_order }.to raise_error "Error - No dishes added to order"
+# # returns error if order has no dishes
+# menu_1 = Menu.new
+# order_1 = Order.new(menu_1)
+# expect { order_1.submit_order }.to raise_error "Error - No dishes added to order"
 
 # returns total price
 menu_1 = Menu.new

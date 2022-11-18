@@ -13,7 +13,6 @@ class Order
     else
       fail "Error - Dish not included in menu"
     end
-    
   end
 
   def order_list

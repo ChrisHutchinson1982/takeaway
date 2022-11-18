@@ -1,17 +1,19 @@
 class Dish
   def initialize(dish, price) # dish is a string and price is a 2dp float
+    @dish = dish
+    @price = price
   end
 
   def dish
-    # Returns a string
+    return @dish
   end
 
   def price
-    # Returns a float
+    return @price
   end
 
-  def text_formatter
-    # Returns string of *#{dish}: *#{price}
+  def dish_formatter
+    return "* #{@dish}: £#{@price}\n"
   end
 
 end
