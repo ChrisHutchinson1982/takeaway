@@ -184,8 +184,7 @@ dish_1 = Dish.new("Cod", 10.49)
 dish_2 = Dish.new("Chips", 3.99)
 menu_1.menu_add(dish_1)
 order_1 = Order.new(menu_1)
-order_1.order_add(dish_2)
-expect { order_1.order_list }.to raise_error "Error - Dish not included in menu"
+expect { order_1.order_add(dish_2) }.to raise_error "Error - Dish not included in menu"
 
 # returns true if order has been submutited
 menu_1 = Menu.new
@@ -207,7 +206,6 @@ expect(order_1.submitted?).to eq false
 # returns error if order has no dishes
 menu_1 = Menu.new
 order_1 = Order.new(menu_1)
-order_1.submit_order
 expect { order_1.submit_order }.to raise_error "Error - No dishes added to order"
 
 # returns total price
