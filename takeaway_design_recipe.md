@@ -161,8 +161,8 @@ expect(menu_1.menu_list).to eq [dish_1, dish_2, dish_3]
 menu_1 = Menu.new
 dish_1 = Dish.new("Cod", 10.49)
 menu_1.menu_add(dish_1)
-menu_1.menu_add(dish_1)
-expect {menu_1.menu_list}.to raise_error "Error - Dish already added to menu"
+expect { menu_1.menu_add(dish_1) }.to raise_error "Error - Dish already added to menu"
+  
 
 # list of order dishes with prices
 menu_1 = Menu.new
@@ -246,7 +246,7 @@ expect(receipt_1.receipt_formatter).to eq "Items\n
                                           * Chips: £3.99\n
                                           \n
                                           Total Price: £18.47"
-                                          
+
 
 # returns receipt error when not submitted
 menu_1 = Menu.new
