@@ -16,7 +16,7 @@ class Receipt
   end
 
   def receipt_formatter
-    fail "Error - Order not submitted" if @order.submitted? == false 
+    fail "Error - Order not submitted" if @order.submitted? == false
     return "Items\n#{order_formatter}\nTotal Price: £#{total_price}"
   end
 end

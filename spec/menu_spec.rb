@@ -1,7 +1,7 @@
 require 'menu'
 
 RSpec.describe Menu do 
-  it "returns list of menu dishes" do
+  it "contructs" do
     menu_1 = Menu.new
     expect(menu_1.menu_list).to eq []
   end
