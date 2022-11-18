@@ -1,8 +1,6 @@
 # takeaway
 
-## Solo Project Brief
-
-Here is a project to test your golden square skills overall:
+## Solo Project User Story
 
 > As a customer  
 > So that I can check if I want to order something  
