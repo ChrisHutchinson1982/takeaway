@@ -1,6 +1,21 @@
 # takeaway
 
-## Solo Project User Story
+## Solo Project 
+
+As part of the first two weeks of the Makers Bootcamp, we have been working 
+through a sequence of exercises and challenges with the following objectives:
+
+* Learn to test-drive programs with multiple classes.
+* Learn to break programs up into classes.
+* Learn to debug your programs.
+* Learn to build software as a pair.
+* Learn to explain why test-driving, object-oriented design, debugging, 
+  and pairing are powerful practices for software engineers.
+
+At the end of the modeule, we have been assigned this solo project that has been 
+designed to test all of our skills.
+
+## User Story
 
 > As a customer  
 > So that I can check if I want to order something  
@@ -25,4 +40,24 @@ doubles too.
 Fair warning: if you push your Twilio API Key to a public Github repository,
 anyone will be able to see and use it. What are the security implications of
 that? How will you keep that information out of your repository?
+
+## Approach
+
+* Object-Oriented Design: Designed mutli class system and tests in
+ <a href="doc:takeaway_design_recipe.md" target="_blank">takeaway_design_recipe.md</a>
+* Test-driving using RSpec: Green on all integration and unit tests (inc. doubles) 
+* Used `twilio-ruby` to send a SMS: Using environment variables
+* Debugging: Using debugging techniques and error message info.
+* Version control: Git and Github
+* Language: Ruby
+
+## Further considerations
+
+* Unit Testing API Requests (e.g. `twilio-ruby`)
+* Refine class design
+* Opportunity to add further conditions as well as greater functionality
+  (e.g. Phone Number input and formatter)
+
+
+
 

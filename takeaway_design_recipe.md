@@ -34,6 +34,7 @@ uses asciiflow.com but you could also use excalidraw.com, draw.io, or miro.com_
 
 ```
 
+![Alt text](/takeaway_class_design.png?raw=true "Optional Title")
 
 ```
 
@@ -134,6 +135,8 @@ class text
   end
 
 end
+
+
 
 
 
