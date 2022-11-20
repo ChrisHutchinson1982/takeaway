@@ -44,7 +44,7 @@ that? How will you keep that information out of your repository?
 ## Approach
 
 * Object-Oriented Design: Designed mutli class system and tests in
- <a href="doc:takeaway_design_recipe.md" target="_blank">takeaway_design_recipe.md</a>
+ [takeaway_design_recipe.md](doc:takeaway_design_recipe.md)
 * Test-driving using RSpec: Green on all integration and unit tests (inc. doubles) 
 * Used `twilio-ruby` to send a SMS: Using environment variables
 * Debugging: Using debugging techniques and error message info.
