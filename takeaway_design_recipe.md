@@ -251,7 +251,7 @@ end
 
 ## 4. Create Examples as Unit Tests
 
-
+See [spec](/spec) folder.
 
 ```ruby
 
