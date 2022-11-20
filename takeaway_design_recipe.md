@@ -206,55 +206,55 @@ combinations that reflect the ways in which the system will be used._
 # order_1.order_add(dish_1)
 # expect(order_1.submitted?).to eq false
 
-# # returns error if order has no dishes
+# # # returns error if order has no dishes
+# # menu_1 = Menu.new
+# # order_1 = Order.new(menu_1)
+# # expect { order_1.submit_order }.to raise_error "Error - No dishes added to order"
+
+# # returns total price
+# menu_1 = Menu.new
+# dish_1 = Dish.new("Cod", 10.49)
+# dish_2 = Dish.new("Chips", 3.99)
+# dish_3 = Dish.new("Haddock", 7.00)
+# menu_1.menu_add(dish_1)
+# menu_2.menu_add(dish_2)
+# menu_3.menu_add(dish_3)
+# order_1 = Order.new(menu_1)
+# order_1.order_add(dish_1)
+# order_1.order_add(dish_2)
+# order_1.order_add(dish_2)
+# receipt_1 = Receipt.new(order_1)
+# expect(receipt_1.total_price).to eq 18.47
+
+
+# # returns receipt string of ordered dishes when submitted
+# menu_1 = Menu.new
+# dish_1 = Dish.new("Cod", 10.49)
+# dish_2 = Dish.new("Chips", 3.99)
+# dish_3 = Dish.new("Haddock", 7.00)
+# menu_1.menu_add(dish_1)
+# menu_2.menu_add(dish_2)
+# menu_3.menu_add(dish_3)
+# order_1 = Order.new(menu_1)
+# order_1.order_add(dish_1)
+# order_1.order_add(dish_2)
+# order_1.order_add(dish_2)
+# order_1.submit_order
+# receipt_1 = Receipt.new(order_1)
+# expect(receipt_1.receipt_formatter).to eq "Items\n
+#                                           * Cod: £10.49\n
+#                                           * Chips: £3.99\n
+#                                           * Chips: £3.99\n
+#                                           \n
+#                                           Total Price: £18.47"
+
+
+# # returns receipt error when not submitted
 # menu_1 = Menu.new
 # order_1 = Order.new(menu_1)
-# expect { order_1.submit_order }.to raise_error "Error - No dishes added to order"
-
-# returns total price
-menu_1 = Menu.new
-dish_1 = Dish.new("Cod", 10.49)
-dish_2 = Dish.new("Chips", 3.99)
-dish_3 = Dish.new("Haddock", 7.00)
-menu_1.menu_add(dish_1)
-menu_2.menu_add(dish_2)
-menu_3.menu_add(dish_3)
-order_1 = Order.new(menu_1)
-order_1.order_add(dish_1)
-order_1.order_add(dish_2)
-order_1.order_add(dish_2)
-receipt_1 = Receipt.new(order_1)
-expect(receipt_1.total_price).to eq 18.47
-
-
-# returns receipt string of ordered dishes when submitted
-menu_1 = Menu.new
-dish_1 = Dish.new("Cod", 10.49)
-dish_2 = Dish.new("Chips", 3.99)
-dish_3 = Dish.new("Haddock", 7.00)
-menu_1.menu_add(dish_1)
-menu_2.menu_add(dish_2)
-menu_3.menu_add(dish_3)
-order_1 = Order.new(menu_1)
-order_1.order_add(dish_1)
-order_1.order_add(dish_2)
-order_1.order_add(dish_2)
-order_1.submit_order
-receipt_1 = Receipt.new(order_1)
-expect(receipt_1.receipt_formatter).to eq "Items\n
-                                          * Cod: £10.49\n
-                                          * Chips: £3.99\n
-                                          * Chips: £3.99\n
-                                          \n
-                                          Total Price: £18.47"
-
-
-# returns receipt error when not submitted
-menu_1 = Menu.new
-order_1 = Order.new(menu_1)
-order_1.submit_order
-receipt_1 = Receipt.new(order_1)
-expect { receipt_1.receipt_formatter }.to raise_error "Error - Order not submitted"
+# order_1.submit_order
+# receipt_1 = Receipt.new(order_1)
+# expect { receipt_1.receipt_formatter }.to raise_error "Error - Order not submitted"
 
 
 # Use the `twilio-ruby` gem to implement this next one. You will need to use
