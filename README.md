@@ -33,9 +33,9 @@ At the end of the module, we were assigned this solo project designed to test al
 
 ## Approach
 
-* Object-Oriented Design: Designed mutli class system and tests mapped out in the [takeaway_design_recipe.md](doc:takeaway_design_recipe)
+* Object-Oriented Design: Designed mutli class system and tests mapped out in the [takeaway_design_recipe.md](/takeaway_design_recipe.md)
 * Test-driving using RSpec: Green on all integration and unit tests (inc. doubles) 
-* Used `twilio-ruby` to send a SMS: Using environment variables
+* Used `twilio-ruby` to send a SMS: Creating environment variables to keep sensitive information out of repo.
 * Debugging: Using debugging techniques and error message info.
 * Version control: Git and Github
 * Language: Ruby
@@ -44,8 +44,7 @@ At the end of the module, we were assigned this solo project designed to test al
 
 * Unit Testing API Requests (e.g. `twilio-ruby`)
 * Refine class design
-* Opportunity to add further conditions as well as greater functionality
-  (e.g. Phone Number input and formatter)
+* Opportunity to add further conditions and greater functionality (e.g. phone number input and formatter)
 
 
 
